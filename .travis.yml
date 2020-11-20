@@ -37,6 +37,7 @@ jobs:
     - PLAT=aarch64
     - NP_BUILD_DEP=numpy>=1.17.3
     - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+    - USE_CCACHE=0
     script:
         - echo "This stage will just build AArch64 wheel"
     workspaces:
@@ -57,6 +58,7 @@ jobs:
     - PLAT=aarch64
     - NP_BUILD_DEP=numpy>=1.17.3
     - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+    - USE_CCACHE=0
     script:
         - echo "This stage will just build AArch64 wheel"
     workspaces:
@@ -77,6 +79,7 @@ jobs:
     - PLAT=aarch64
     - NP_BUILD_DEP=numpy>=1.17.3
     - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+    - USE_CCACHE=0
     script:
         - echo "This stage will just build AArch64 wheel"
     workspaces:
@@ -157,6 +160,7 @@ jobs:
     - PLAT=aarch64
     - NP_TEST_DEP=numpy>=1.17.3
     - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+    - USE_CCACHE=0
     workspaces:
       use: ws1
     install:
@@ -171,6 +175,7 @@ jobs:
     - PLAT=aarch64
     - NP_TEST_DEP=numpy>=1.17.3
     - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+    - USE_CCACHE=0
     workspaces:
       use: ws2
     install:
@@ -185,6 +190,7 @@ jobs:
     - PLAT=aarch64
     - NP_TEST_DEP=numpy>=1.17.3
     - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+    - USE_CCACHE=0
     workspaces:
       use: ws3
     install:
